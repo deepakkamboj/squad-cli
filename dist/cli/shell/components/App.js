@@ -149,8 +149,8 @@ export const App = ({ registry, renderer, teamRoot, version, maxMessages, onRead
         }
     });
     const handleSubmit = useCallback((input) => {
-        // Bare "exit" exits the shell
-        if (EXIT_WORDS.has(input.toLowerCase())) {
+        // Bare "exit" / "/exit" / "\exit" all exit the shell
+        if (EXIT_WORDS.has(input.trim().toLowerCase().replace(/^[/\\]+/, ''))) {
             exit();
             return;
         }
