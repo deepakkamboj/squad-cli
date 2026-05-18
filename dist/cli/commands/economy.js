@@ -7,8 +7,8 @@
  *   squad economy       — show current status
  */
 import { join } from 'node:path';
-import { FSStorageProvider } from '@bradygaster/squad-sdk';
-import { writeEconomyMode, readEconomyMode } from '@bradygaster/squad-sdk/config';
+import { FSStorageProvider } from '@deepakkamboj/squad-sdk';
+import { writeEconomyMode, readEconomyMode } from '@deepakkamboj/squad-sdk/config';
 const storage = new FSStorageProvider();
 import { fatal } from '../core/errors.js';
 import { BOLD, RESET, GREEN, DIM } from '../core/output.js';

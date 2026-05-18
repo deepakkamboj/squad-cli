@@ -3,9 +3,9 @@
  * @module cli/core/cast
  */
 import { join } from 'node:path';
-import { FSStorageProvider } from '@bradygaster/squad-sdk';
-import { getRoleById, generateCharterFromRole, addAgentToConfig, } from '@bradygaster/squad-sdk';
-import { CastingEngine, } from '@bradygaster/squad-sdk/casting';
+import { FSStorageProvider } from '@deepakkamboj/squad-sdk';
+import { getRoleById, generateCharterFromRole, addAgentToConfig, } from '@deepakkamboj/squad-sdk';
+import { CastingEngine, } from '@deepakkamboj/squad-sdk/casting';
 // ── Emoji mapping ──────────────────────────────────────────────────
 const ROLE_EMOJI_MAP = [
     [/lead|architect|tech\s*lead/i, '🏗️'],

@@ -4,7 +4,7 @@
  * @module cli/core/migrations
  */
 import path from 'node:path';
-import { FSStorageProvider } from '@bradygaster/squad-sdk';
+import { FSStorageProvider } from '@deepakkamboj/squad-sdk';
 import { success } from './output.js';
 import { scrubEmails } from './email-scrub.js';
 const storage = new FSStorageProvider();

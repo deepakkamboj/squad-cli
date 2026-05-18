@@ -3,8 +3,8 @@
  *
  * Creates SDK sessions via SquadClient, sends the task, and streams the response.
  */
-import { resolveSquad } from '@bradygaster/squad-sdk/resolution';
-import { SquadState, FSStorageProvider } from '@bradygaster/squad-sdk';
+import { resolveSquad } from '@deepakkamboj/squad-sdk/resolution';
+import { SquadState, FSStorageProvider } from '@deepakkamboj/squad-sdk';
 import { dirname } from 'node:path';
 /** Debug logger — writes to stderr only when SQUAD_DEBUG=1. */
 function debugLog(...args) {

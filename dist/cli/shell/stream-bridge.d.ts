@@ -6,7 +6,7 @@
  *
  * @module cli/shell/stream-bridge
  */
-import type { StreamingEvent } from '@bradygaster/squad-sdk/runtime/streaming';
+import type { StreamingEvent } from '@deepakkamboj/squad-sdk/runtime/streaming';
 import type { SessionRegistry } from './sessions.js';
 import type { ShellMessage } from './types.js';
 export interface StreamBridgeOptions {

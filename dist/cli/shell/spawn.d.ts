@@ -3,7 +3,7 @@
  *
  * Creates SDK sessions via SquadClient, sends the task, and streams the response.
  */
-import { SquadClient } from '@bradygaster/squad-sdk/client';
+import { SquadClient } from '@deepakkamboj/squad-sdk/client';
 import { SessionRegistry } from './sessions.js';
 export interface SpawnOptions {
     /** Wait for completion (sync) or fire-and-track (background) */

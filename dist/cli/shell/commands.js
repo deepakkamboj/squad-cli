@@ -3,7 +3,7 @@ import { BOLD, DIM, RESET } from '../core/output.js';
 import { listSessions, loadSessionById } from './session-store.js';
 import { formatAgentLine } from './agent-status.js';
 import path from 'node:path';
-import { FSStorageProvider } from '@bradygaster/squad-sdk';
+import { FSStorageProvider } from '@deepakkamboj/squad-sdk';
 import { getBrand } from '../brand.js';
 import { runNapSync, formatNapReport } from '../core/nap.js';
 const storage = new FSStorageProvider();

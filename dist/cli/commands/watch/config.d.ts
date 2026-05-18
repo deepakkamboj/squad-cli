@@ -3,7 +3,7 @@
  *
  * Priority: CLI flag > .squad/config.json "watch" section > defaults.
  */
-import type { SquadStateContext, StateBackendType } from '@bradygaster/squad-sdk';
+import type { SquadStateContext, StateBackendType } from '@deepakkamboj/squad-sdk';
 /** Dispatch strategy for issue execution. */
 export type DispatchMode = 'task' | 'fleet' | 'hybrid';
 /** Fully-resolved watch configuration. */

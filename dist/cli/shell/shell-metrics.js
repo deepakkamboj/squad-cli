@@ -9,7 +9,7 @@
  *
  * @module shell/shell-metrics
  */
-import { getMeter } from '@bradygaster/squad-sdk';
+import { getMeter } from '@deepakkamboj/squad-sdk';
 // ============================================================================
 // Internal state
 // ============================================================================

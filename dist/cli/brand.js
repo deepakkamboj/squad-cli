@@ -1,7 +1,7 @@
 /**
  * Brand resolution for squad-cli.
  *
- * Vendored from @bradygaster/squad-sdk/branding so squad-cli can be installed
+ * Vendored from @deepakkamboj/squad-sdk/branding so squad-cli can be installed
  * as a standalone GitHub path dependency without requiring the fork's squad-sdk.
  *
  * Resolution order (later wins): default → ~/.squad/brand.json →

@@ -10,7 +10,7 @@
  * @module cli/commands/doctor
  */
 import path from 'node:path';
-import { FSStorageProvider } from '@bradygaster/squad-sdk';
+import { FSStorageProvider } from '@deepakkamboj/squad-sdk';
 const storage = new FSStorageProvider();
 // ── helpers ─────────────────────────────────────────────────────────
 function fileExists(p) {

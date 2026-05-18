@@ -8,7 +8,7 @@
  */
 import { resolve, basename } from 'node:path';
 import { createInterface } from 'node:readline';
-import { isConsultMode, detectLicense, loadStagedLearnings, logConsultation, mergeToPersonalSquad, getPersonalSquadRoot, FSStorageProvider, } from '@bradygaster/squad-sdk';
+import { isConsultMode, detectLicense, loadStagedLearnings, logConsultation, mergeToPersonalSquad, getPersonalSquadRoot, FSStorageProvider, } from '@deepakkamboj/squad-sdk';
 import { fatal } from '../core/errors.js';
 const storage = new FSStorageProvider();
 /**

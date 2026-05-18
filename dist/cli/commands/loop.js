@@ -13,8 +13,8 @@ import { detectSquadDir } from '../core/detect-squad-dir.js';
 import { fatal } from '../core/errors.js';
 import { GREEN, RED, DIM, BOLD, RESET, YELLOW } from '../core/output.js';
 import { createDefaultRegistry, } from './watch/index.js';
-import { createPlatformAdapter } from '@bradygaster/squad-sdk/platform';
-import { parseRoster } from '@bradygaster/squad-sdk/ralph/triage';
+import { createPlatformAdapter } from '@deepakkamboj/squad-sdk/platform';
+import { parseRoster } from '@deepakkamboj/squad-sdk/ralph/triage';
 // ── Frontmatter Parser ───────────────────────────────────────────
 /**
  * Parse a loop.md string into validated frontmatter + prompt body.

@@ -11,7 +11,7 @@
  */
 import path from 'node:path';
 import os from 'node:os';
-import { FSStorageProvider } from '@bradygaster/squad-sdk';
+import { FSStorageProvider } from '@deepakkamboj/squad-sdk';
 const storage = new FSStorageProvider();
 import { compareVersions } from './upgrade.js';
 import { BOLD, RESET, DIM, YELLOW } from './core/output.js';

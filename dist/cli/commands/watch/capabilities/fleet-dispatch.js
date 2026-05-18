@@ -108,7 +108,7 @@ export class FleetDispatchCapability {
                 labels: wi.tags.map(t => ({ name: t })),
                 assignees: wi.assignedTo ? [{ login: wi.assignedTo }] : [],
             }));
-            const { filterByCapabilities, loadCapabilities } = await import('@bradygaster/squad-sdk/ralph/capabilities');
+            const { filterByCapabilities, loadCapabilities } = await import('@deepakkamboj/squad-sdk/ralph/capabilities');
             const capabilities = await loadCapabilities(context.teamRoot);
             const { handled } = filterByCapabilities(issues, capabilities);
             const executable = findExecutableIssues(context.roster, capabilities, handled);

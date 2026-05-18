@@ -14,7 +14,7 @@
  * @module cli/commands/externalize
  */
 import path from 'node:path';
-import { FSStorageProvider, resolveExternalStateDir, deriveProjectKey } from '@bradygaster/squad-sdk';
+import { FSStorageProvider, resolveExternalStateDir, deriveProjectKey } from '@deepakkamboj/squad-sdk';
 import { fatal } from '../core/errors.js';
 const storage = new FSStorageProvider();
 /** Entries under .squad/ that must NOT be externalized (they stay in the repo).

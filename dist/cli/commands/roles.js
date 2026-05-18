@@ -1,4 +1,4 @@
-import { listRoles, searchRoles, getCategories } from '@bradygaster/squad-sdk';
+import { listRoles, searchRoles, getCategories } from '@deepakkamboj/squad-sdk';
 const SOFTWARE_DEVELOPMENT_CATEGORIES = new Set(['engineering', 'quality']);
 function getFlagValue(args, flag) {
     const idx = args.indexOf(flag);

@@ -6,7 +6,7 @@
  */
 import { randomUUID } from 'node:crypto';
 import { join } from 'node:path';
-import { FSStorageProvider, safeTimestamp } from '@bradygaster/squad-sdk';
+import { FSStorageProvider, safeTimestamp } from '@deepakkamboj/squad-sdk';
 const storage = new FSStorageProvider();
 /** 24 hours in milliseconds — sessions older than this are not offered for resume. */
 const RECENT_THRESHOLD_MS = 24 * 60 * 60 * 1000;

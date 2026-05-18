@@ -9,7 +9,7 @@
  * @module cli/commands/init-remote
  */
 import path from 'node:path';
-import { FSStorageProvider } from '@bradygaster/squad-sdk';
+import { FSStorageProvider } from '@deepakkamboj/squad-sdk';
 const storage = new FSStorageProvider();
 /**
  * Write `.squad/config.json` for remote mode.

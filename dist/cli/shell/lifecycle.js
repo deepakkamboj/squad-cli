@@ -7,7 +7,7 @@
  * @module cli/shell/lifecycle
  */
 import path from 'node:path';
-import { FSStorageProvider } from '@bradygaster/squad-sdk';
+import { FSStorageProvider } from '@deepakkamboj/squad-sdk';
 /** Debug logger — writes to stderr only when SQUAD_DEBUG=1. */
 function debugLog(...args) {
     if (process.env['SQUAD_DEBUG'] === '1') {

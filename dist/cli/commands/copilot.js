@@ -3,7 +3,7 @@
  * Port from beta index.js lines 598-713
  */
 import path from 'node:path';
-import { FSStorageProvider } from '@bradygaster/squad-sdk';
+import { FSStorageProvider } from '@deepakkamboj/squad-sdk';
 const storage = new FSStorageProvider();
 import { success, BOLD, RESET, DIM } from '../core/output.js';
 import { detectSquadDir } from '../core/detect-squad-dir.js';

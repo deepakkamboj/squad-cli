@@ -1,5 +1,5 @@
 import { join } from 'node:path';
-import { listRoles, searchRoles, FSStorageProvider } from '@bradygaster/squad-sdk';
+import { listRoles, searchRoles, FSStorageProvider } from '@deepakkamboj/squad-sdk';
 /** Debug logger — writes to stderr only when SQUAD_DEBUG=1. */
 function debugLog(...args) {
     if (process.env['SQUAD_DEBUG'] === '1') {

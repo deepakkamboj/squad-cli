@@ -4,7 +4,7 @@
  * Priority: CLI flag > .squad/config.json "watch" section > defaults.
  */
 import path from 'node:path';
-import { FSStorageProvider } from '@bradygaster/squad-sdk';
+import { FSStorageProvider } from '@deepakkamboj/squad-sdk';
 const storage = new FSStorageProvider();
 const DEFAULTS = {
     interval: 10,

@@ -4,7 +4,7 @@
  * Every opt-in watch feature implements {@link WatchCapability} so the
  * main loop stays thin and each feature is testable in isolation.
  */
-import type { PlatformAdapter } from '@bradygaster/squad-sdk/platform';
+import type { PlatformAdapter } from '@deepakkamboj/squad-sdk/platform';
 /** Phase within a single watch round. */
 export type WatchPhase = 'pre-scan' | 'post-triage' | 'post-execute' | 'housekeeping';
 /** Result of a capability preflight check. */

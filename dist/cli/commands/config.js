@@ -10,7 +10,7 @@
  */
 import { join } from 'node:path';
 import { existsSync, readdirSync } from 'node:fs';
-import { readModelPreference, writeModelPreference, readAgentModelOverrides, writeAgentModelOverrides, MODEL_CATALOG, } from '@bradygaster/squad-sdk/config';
+import { readModelPreference, writeModelPreference, readAgentModelOverrides, writeAgentModelOverrides, MODEL_CATALOG, } from '@deepakkamboj/squad-sdk/config';
 import { fatal } from '../core/errors.js';
 import { BOLD, RESET, GREEN, DIM, RED } from '../core/output.js';
 function resolveSquadDir(cwd) {

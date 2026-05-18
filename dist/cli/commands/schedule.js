@@ -8,14 +8,14 @@
  *   squad schedule status   — show last run times and next due
  */
 import path from 'node:path';
-import { FSStorageProvider } from '@bradygaster/squad-sdk';
+import { FSStorageProvider } from '@deepakkamboj/squad-sdk';
 const storage = new FSStorageProvider();
 import { detectSquadDir } from '../core/detect-squad-dir.js';
 import { success, warn, info, secondary, BOLD, RESET, GREEN, YELLOW, RED, GRAY, DIM } from '../core/output.js';
 import { fatal } from '../core/errors.js';
 // Re-export so tests can mock through this module
 async function loadSchedulerModule() {
-    return import('@bradygaster/squad-sdk/runtime/scheduler');
+    return import('@deepakkamboj/squad-sdk/runtime/scheduler');
 }
 function resolveSchedulePath(cwd) {
     const squadInfo = detectSquadDir(cwd);

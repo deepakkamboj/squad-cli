@@ -9,18 +9,18 @@ import path from 'node:path';
 import fs from 'node:fs';
 import { execFile, execFileSync } from 'node:child_process';
 import { promisify } from 'node:util';
-import { FSStorageProvider } from '@bradygaster/squad-sdk';
+import { FSStorageProvider } from '@deepakkamboj/squad-sdk';
 const storage = new FSStorageProvider();
 const execFileAsync = promisify(execFile);
 import { detectSquadDir } from '../../core/detect-squad-dir.js';
 import { fatal } from '../../core/errors.js';
 import { GREEN, RED, DIM, BOLD, RESET, YELLOW } from '../../core/output.js';
-import { parseRoutingRules, parseModuleOwnership, parseRoster, triageIssue, } from '@bradygaster/squad-sdk/ralph/triage';
-import { RalphMonitor } from '@bradygaster/squad-sdk/ralph';
-import { EventBus } from '@bradygaster/squad-sdk/runtime/event-bus';
+import { parseRoutingRules, parseModuleOwnership, parseRoster, triageIssue, } from '@deepakkamboj/squad-sdk/ralph/triage';
+import { RalphMonitor } from '@deepakkamboj/squad-sdk/ralph';
+import { EventBus } from '@deepakkamboj/squad-sdk/runtime/event-bus';
 import { ghAvailable, ghAuthenticated, ghRateLimitCheck, isRateLimitError } from '../../core/gh-cli.js';
-import { PredictiveCircuitBreaker, getTrafficLight, } from '@bradygaster/squad-sdk/ralph/rate-limiting';
-import { createPlatformAdapter } from '@bradygaster/squad-sdk/platform';
+import { PredictiveCircuitBreaker, getTrafficLight, } from '@deepakkamboj/squad-sdk/ralph/rate-limiting';
+import { createPlatformAdapter } from '@deepakkamboj/squad-sdk/platform';
 import { createDefaultRegistry } from './capabilities/index.js';
 import { createVerboseLogger } from './verbose.js';
 export { loadWatchConfig } from './config.js';
@@ -220,7 +220,7 @@ async function runCheck(rules, modules, roster, hasCopilot, autoAssign, capabili
             const assignees = issue.assignees?.map((a) => a.login).join(', ') ?? 'none';
             vlog?.log(`  #${issue.number}: "${issue.title}" [${labels}] assignees=[${assignees}]`);
         }
-        const { filterByCapabilities } = await import('@bradygaster/squad-sdk/ralph/capabilities');
+        const { filterByCapabilities } = await import('@deepakkamboj/squad-sdk/ralph/capabilities');
         const { handled: capableIssues, skipped: incapableIssues } = filterByCapabilities(issues, capabilities);
         for (const { issue, missing } of incapableIssues) {
             console.log(`${DIM}[${timestamp}] ⏭️ Skipping #${issue.number} "${issue.title}" — missing: ${missing.join(', ')}${RESET}`);
@@ -578,7 +578,7 @@ export async function runWatch(dest, options) {
     const rules = parseRoutingRules(routingContent);
     const modules = parseModuleOwnership(routingContent);
     // Load machine capabilities (#514)
-    const { loadCapabilities } = await import('@bradygaster/squad-sdk/ralph/capabilities');
+    const { loadCapabilities } = await import('@deepakkamboj/squad-sdk/ralph/capabilities');
     const capabilities = await loadCapabilities(teamRoot);
     if (capabilities) {
         console.log(`${DIM}📦 Machine: ${capabilities.machine} — ${capabilities.capabilities.length} capabilities loaded${RESET}`);

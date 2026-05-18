@@ -7,7 +7,7 @@
  *
  * @module cli/upgrade
  */
-import { MigrationRegistry } from '@bradygaster/squad-sdk/config';
+import { MigrationRegistry } from '@deepakkamboj/squad-sdk/config';
 /** Release channel for updates. */
 export type ReleaseChannel = 'stable' | 'preview' | 'insider';
 /** Information about an available update. */

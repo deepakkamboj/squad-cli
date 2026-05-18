@@ -8,9 +8,9 @@
  */
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
-import { FSStorageProvider } from '@bradygaster/squad-sdk';
+import { FSStorageProvider } from '@deepakkamboj/squad-sdk';
 const storage = new FSStorageProvider();
-import { loadSubSquadsConfig, resolveSubSquad } from '@bradygaster/squad-sdk';
+import { loadSubSquadsConfig, resolveSubSquad } from '@deepakkamboj/squad-sdk';
 const BOLD = '\x1b[1m';
 const RESET = '\x1b[0m';
 const DIM = '\x1b[2m';

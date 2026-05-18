@@ -7,7 +7,7 @@
  *
  * @module cli/copilot-install
  */
-import { initSquad } from '@bradygaster/squad-sdk/config';
+import { initSquad } from '@deepakkamboj/squad-sdk/config';
 /**
  * Detect which Copilot environment is active.
  *

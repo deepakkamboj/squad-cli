@@ -3,7 +3,7 @@
  * @module cli/core/migrate-directory
  */
 import path from 'node:path';
-import { FSStorageProvider } from '@bradygaster/squad-sdk';
+import { FSStorageProvider } from '@deepakkamboj/squad-sdk';
 import { success, dim, bold } from './output.js';
 import { fatal } from './errors.js';
 import { scrubEmails } from './email-scrub.js';

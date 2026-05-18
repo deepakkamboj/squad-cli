@@ -7,7 +7,7 @@
  * @module cli/commands/consult
  */
 import { resolve, basename } from 'node:path';
-import { setupConsultMode, isConsultMode, PersonalSquadNotFoundError, FSStorageProvider, } from '@bradygaster/squad-sdk';
+import { setupConsultMode, isConsultMode, PersonalSquadNotFoundError, FSStorageProvider, } from '@deepakkamboj/squad-sdk';
 const storage = new FSStorageProvider();
 import { fatal } from '../core/errors.js';
 /**

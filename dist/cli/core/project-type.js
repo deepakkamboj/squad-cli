@@ -2,7 +2,7 @@
  * Project type detection — zero dependencies
  */
 import path from 'node:path';
-import { FSStorageProvider } from '@bradygaster/squad-sdk';
+import { FSStorageProvider } from '@deepakkamboj/squad-sdk';
 const storage = new FSStorageProvider();
 /**
  * Detect project type by checking for marker files in the target directory

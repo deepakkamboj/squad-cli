@@ -12,7 +12,7 @@ import { promisify } from 'node:util';
 import { success, info, BOLD, RESET, DIM } from '../core/output.js';
 import { fatal } from '../core/errors.js';
 import { detectSquadDir } from '../core/detect-squad-dir.js';
-import { discoverSquads, formatDiscoveryTable, findSquadByName, buildDelegationArgs, } from '@bradygaster/squad-sdk';
+import { discoverSquads, formatDiscoveryTable, findSquadByName, buildDelegationArgs, } from '@deepakkamboj/squad-sdk';
 const execFileAsync = promisify(execFile);
 export async function discoverCommand() {
     const squadDirInfo = detectSquadDir(process.cwd());

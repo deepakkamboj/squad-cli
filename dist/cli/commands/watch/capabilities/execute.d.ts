@@ -2,7 +2,7 @@
  * Execute capability — spawns Copilot sessions for eligible issues.
  */
 import type { WatchCapability, WatchContext, PreflightResult, CapabilityResult } from '../types.js';
-import type { MachineCapabilities } from '@bradygaster/squad-sdk/ralph/capabilities';
+import type { MachineCapabilities } from '@deepakkamboj/squad-sdk/ralph/capabilities';
 /** Normalized work item for execution. */
 export interface ExecutableWorkItem {
     number: number;

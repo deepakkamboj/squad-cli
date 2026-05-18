@@ -80,7 +80,7 @@ function _handleTopLevelSignal(signal) {
 }
 process.on('SIGINT', () => _handleTopLevelSignal('SIGINT'));
 process.on('SIGTERM', () => _handleTopLevelSignal('SIGTERM'));
-import { FSStorageProvider, resolveSquadState } from '@bradygaster/squad-sdk';
+import { FSStorageProvider, resolveSquadState } from '@deepakkamboj/squad-sdk';
 import { getBrand } from './cli/brand.js';
 import path from 'node:path';
 import { fatal, SquadError } from './cli/core/errors.js';
@@ -90,7 +90,7 @@ import { runCost } from './cli/commands/cost.js';
 import { getPackageVersion } from './cli/core/version.js';
 // Lazy-load squad-sdk to avoid triggering @github/copilot-sdk import on Node 24+
 // (Issue: copilot-sdk has broken ESM imports - vscode-jsonrpc/node without .js extension)
-const lazySquadSdk = () => import('@bradygaster/squad-sdk');
+const lazySquadSdk = () => import('@deepakkamboj/squad-sdk');
 const lazyRunShell = () => import('./cli/shell/index.js');
 // Use local version resolver instead of importing VERSION from squad-sdk
 const VERSION = getPackageVersion();
@@ -302,8 +302,8 @@ async function main() {
         // Global init: suppress workflows (no GitHub CI in ~/.config/squad/) and bootstrap personal squad
         runInit(dest, { includeWorkflows: !noWorkflows && !hasGlobal, sdk, roles, isGlobal: hasGlobal, stateBackend: initStateBackend }).then(async () => {
             if (presetName) {
-                const { seedBuiltinPresets, applyPreset } = await import('@bradygaster/squad-sdk/presets');
-                const { resolvePresetsDir, ensureSquadHome } = await import('@bradygaster/squad-sdk/resolution');
+                const { seedBuiltinPresets, applyPreset } = await import('@deepakkamboj/squad-sdk/presets');
+                const { resolvePresetsDir, ensureSquadHome } = await import('@deepakkamboj/squad-sdk/resolution');
                 const nodePath = await import('node:path');
                 // Auto-initialize squad home + presets if they don't exist yet
                 if (!resolvePresetsDir()) {
@@ -575,7 +575,7 @@ async function main() {
         if (args.includes('--init')) {
             const fileIdx = args.indexOf('--file');
             const filePath = (fileIdx !== -1 && args[fileIdx + 1]) ? args[fileIdx + 1] : 'loop.md';
-            const { FSStorageProvider } = await import('@bradygaster/squad-sdk');
+            const { FSStorageProvider } = await import('@deepakkamboj/squad-sdk');
             const storage = new FSStorageProvider();
             const pathMod = await import('node:path');
             const absPath = pathMod.default.resolve(getSquadStartDir(), filePath);

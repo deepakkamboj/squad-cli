@@ -9,7 +9,7 @@
  * @module cli/commands/link
  */
 import path from 'node:path';
-import { FSStorageProvider, clearResolveSquadCache } from '@bradygaster/squad-sdk';
+import { FSStorageProvider, clearResolveSquadCache } from '@deepakkamboj/squad-sdk';
 import { fatal } from '../core/errors.js';
 const storage = new FSStorageProvider();
 /**

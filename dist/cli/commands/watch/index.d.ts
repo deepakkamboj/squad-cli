@@ -5,7 +5,7 @@
  * Core triage logic (runCheck, checkPRs) remains inline because it
  * always runs — it is not an opt-in capability.
  */
-import type { PlatformAdapter } from '@bradygaster/squad-sdk/platform';
+import type { PlatformAdapter } from '@deepakkamboj/squad-sdk/platform';
 import type { WatchConfig } from './config.js';
 export type { WatchConfig } from './config.js';
 export { loadWatchConfig } from './config.js';

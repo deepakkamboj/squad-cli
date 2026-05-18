@@ -7,7 +7,7 @@
  */
 import path from 'node:path';
 import { rmSync } from 'node:fs';
-import { FSStorageProvider } from '@bradygaster/squad-sdk';
+import { FSStorageProvider } from '@deepakkamboj/squad-sdk';
 const storage = new FSStorageProvider();
 /** Default: files older than this many days are pruned. */
 const DEFAULT_MAX_AGE_DAYS = 30;

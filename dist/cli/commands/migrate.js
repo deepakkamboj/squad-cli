@@ -3,7 +3,7 @@
  * @module cli/commands/migrate
  */
 import path from 'node:path';
-import { FSStorageProvider } from '@bradygaster/squad-sdk';
+import { FSStorageProvider } from '@deepakkamboj/squad-sdk';
 const storage = new FSStorageProvider();
 import { success, warn, dim, BOLD, RESET, DIM } from '../core/output.js';
 import { fatal } from '../core/errors.js';
@@ -211,7 +211,7 @@ function generateSquadConfig(team, agents, routing, casting) {
     if (casting) {
         lines.push("  defineCasting,");
     }
-    lines.push("} from '@bradygaster/squad-sdk';");
+    lines.push("} from '@deepakkamboj/squad-sdk';");
     lines.push("");
     lines.push("/**");
     lines.push(" * Squad Configuration");

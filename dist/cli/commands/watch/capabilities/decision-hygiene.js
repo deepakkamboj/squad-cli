@@ -3,7 +3,7 @@
  */
 import path from 'node:path';
 import { execFile } from 'node:child_process';
-import { FSStorageProvider } from '@bradygaster/squad-sdk';
+import { FSStorageProvider } from '@deepakkamboj/squad-sdk';
 const storage = new FSStorageProvider();
 function buildAgentCommand(prompt, context) {
     if (context.agentCmd) {
