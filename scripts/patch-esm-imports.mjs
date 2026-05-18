@@ -23,10 +23,13 @@ import { fileURLToPath } from 'url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // Locations where npm workspaces / global install may place dependencies
+// __dirname = <root>/node_modules/@deepakkamboj/squad-cli/scripts
 const SEARCH_ROOTS = [
-  join(__dirname, '..', 'node_modules'),              // squad-cli local
-  join(__dirname, '..', '..', '..', 'node_modules'),  // workspace root
-  join(__dirname, '..', '..'),                         // global install (sibling)
+  join(__dirname, '..', 'node_modules'),                          // squad-cli local node_modules
+  join(__dirname, '..', '..', '..'),                              // top-level node_modules (3 up: scripts→cli→@scope→node_modules)
+  join(__dirname, '..', '..'),                                    // @scope dir (sibling packages, global install)
+  join(__dirname, '..', '..', 'squad-sdk', 'node_modules'),       // squad-sdk's nested node_modules
+  join(__dirname, '..', '..', '..', '..', 'node_modules'),        // project root (when nested in workspace)
 ];
 
 /**
