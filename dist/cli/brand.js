@@ -16,6 +16,7 @@ const DEFAULT_BRAND = {
     nameUpper: 'SQUAD',
     bannerArt: SQUAD_DEFAULT_BANNER_ART,
     tagline: 'Your AI team — multi-agent runtime',
+    version: '',
     prompt: '◆ squad> ',
     narrowPrompt: 'sq> ',
     hintFull: 'Type naturally · @Agent to direct · /help',
@@ -103,6 +104,8 @@ function readEnvOverrides() {
         overrides.coordinatorAgentName = env['SQUAD_BRAND_COORDINATOR'];
     if (env['SQUAD_BRAND_ISSUES_URL'])
         overrides.issuesUrl = env['SQUAD_BRAND_ISSUES_URL'];
+    if (env['SQUAD_BRAND_VERSION'])
+        overrides.version = env['SQUAD_BRAND_VERSION'];
     return overrides;
 }
 function mergeBrand(base, override) {

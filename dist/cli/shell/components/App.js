@@ -294,16 +294,17 @@ export const App = ({ registry, renderer, teamRoot, version, maxMessages, onRead
         const borderStyle = brand.bannerBorderStyle;
         const showBorder = brand.bannerBorderStyle !== 'none';
         const issuesSuffix = brand.issuesUrl ? ` — file issues at ${brand.issuesUrl}` : '';
+        const displayVersion = brand.version || version;
         // Narrow: minimal header, no border
         if (tier === 'narrow') {
-            return (_jsxs(Box, { flexDirection: "column", paddingX: 1, children: [_jsx(Text, { bold: true, color: noColor ? undefined : accent, children: brand.nameUpper }), _jsxs(Text, { dimColor: true, children: ["v", version] }), _jsx(Text, { color: noColor ? undefined : warn, dimColor: true, children: "\u26A0\uFE0F  Experimental" })] }));
+            return (_jsxs(Box, { flexDirection: "column", paddingX: 1, children: [_jsx(Text, { bold: true, color: noColor ? undefined : accent, children: brand.nameUpper }), brand.tagline ? _jsx(Text, { dimColor: true, children: brand.tagline }) : null, _jsxs(Text, { dimColor: true, children: ["v", displayVersion] }), _jsx(Text, { color: noColor ? undefined : warn, dimColor: true, children: "\u26A0\uFE0F  Experimental" })] }));
         }
         // Normal: abbreviated header
         if (tier === 'normal') {
             const boxProps = showBorder
                 ? { borderStyle, borderColor: noColor ? undefined : borderColor }
                 : {};
-            return (_jsxs(Box, { flexDirection: "column", ...boxProps, paddingX: 1, children: [_jsxs(Text, { bold: true, color: noColor ? undefined : accent, children: [brand.nameUpper, " v", version] }), _jsx(Text, { dimColor: true, children: brand.hintFull }), _jsx(Text, { color: noColor ? undefined : warn, dimColor: true, children: "\u26A0\uFE0F  Experimental preview" })] }));
+            return (_jsxs(Box, { flexDirection: "column", ...boxProps, paddingX: 1, children: [_jsxs(Text, { bold: true, color: noColor ? undefined : accent, children: [brand.nameUpper, " v", displayVersion] }), brand.tagline ? _jsx(Text, { dimColor: true, children: brand.tagline }) : null, _jsx(Text, { dimColor: true, children: brand.hintFull }), _jsx(Text, { color: noColor ? undefined : warn, dimColor: true, children: "\u26A0\uFE0F  Experimental preview" })] }));
         }
         // Wide: full ASCII art header
         const wideBoxProps = showBorder
@@ -324,7 +325,7 @@ export const App = ({ registry, renderer, teamRoot, version, maxMessages, onRead
                 ? _jsx(Text, { bold: true, children: line }, li)
                 : _jsx(Text, { bold: true, color: RAINBOW_HEX[li % RAINBOW_HEX.length], children: line }, li))
             : null;
-        return (_jsxs(Box, { flexDirection: "column", ...wideBoxProps, paddingX: 1, children: [rainbowLines && _jsx(Box, { flexDirection: "column", children: rainbowLines }), _jsx(Text, { children: ' ' }), _jsxs(Text, { dimColor: true, children: ["v", version, " \u00B7 ", brand.hintFull] }), _jsxs(Text, { color: noColor ? undefined : warn, dimColor: true, children: ["\u26A0\uFE0F  Experimental preview", issuesSuffix] })] }));
+        return (_jsxs(Box, { flexDirection: "column", ...wideBoxProps, paddingX: 1, children: [rainbowLines && _jsx(Box, { flexDirection: "column", children: rainbowLines }), _jsx(Text, { children: ' ' }), brand.tagline ? _jsx(Text, { dimColor: true, children: brand.tagline }) : null, _jsxs(Text, { dimColor: true, children: ["v", displayVersion, " \u00B7 ", brand.hintFull] }), _jsxs(Text, { color: noColor ? undefined : warn, dimColor: true, children: ["\u26A0\uFE0F  Experimental preview", issuesSuffix] })] }));
     }, [noColor, version, tier]);
     const firstRunElement = useMemo(() => {
         if (!welcome?.isFirstRun)

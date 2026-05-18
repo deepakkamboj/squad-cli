@@ -12,6 +12,7 @@ export interface Brand {
     nameUpper: string;
     bannerArt: string;
     tagline: string;
+    version: string;
     prompt: string;
     narrowPrompt: string;
     hintFull: string;
